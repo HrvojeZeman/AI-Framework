@@ -9,9 +9,13 @@ class Tolkien_I:
 			tensorflow.keras.layers.Dropout(0.2),
 			tensorflow.keras.layers.Dense(10)]
 		)
-	
+		
 	def getModel(self):
 		return self.Tolkien_I
 	
-	def getLayers(self):
-		raise Exception("Method not yet implemented")
+	def summary(self):
+		print("Flatten layer with (28,28) shape.")
+		print("Dense layer with 128 neurons and ReLu activation function.")
+		print("Dropout layer with 0.2 dropout.")
+		print("Dense layer with 10 neurons.")
+		

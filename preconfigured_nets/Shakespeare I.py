@@ -13,5 +13,8 @@ class ShakespeareI:
 	def getModel(self):
 		return self.ShakespeareI
 	
-	def getLayers(self):
-		raise Exception("Method not yet implemented")
+	def summary(self):
+		print("Flatten layer with (28,28) shape.")
+		print("Dense layer with 128 neurons and ReLu activation function.")
+		print("Dropout layer with 0.2 dropout.")
+		print("Dense layer with 10 neurons.")
