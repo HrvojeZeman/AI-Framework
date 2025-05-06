@@ -5,6 +5,7 @@ import numpy
 class Data:
 	Text = -1
 	file = -1
+	tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 	def __init__(self):
 		# Load text/load right away or just leave it blank?
 		pass
@@ -20,8 +21,7 @@ class Data:
 		self.Text = Text
 	
 	def ReturnTokens(self):
-		tokenizer = Tokenizer()
-		return tokenizer.fit_on_texts(self.Text)
+		return self.tokenizer.encode(self.Text, add_special_tokens=False)
 	
 	def ReturnEmbeddings(self):
 		# embedding_layer = tensorflow.keras.layers.Embedding(input_dim=10000, output_dim=128)
